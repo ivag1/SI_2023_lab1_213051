@@ -1,0 +1,55 @@
+1. https://github.com/ivag1
+2. update-ирано име од main во master
+3. На мојот профил, преку Repositories, па потоа New, креирав оддалечен
+репозиториум и го одбрав полето Private
+4. во Command Prompt:
+mkdir SI_2023_lab1_213051 // креирање локален репозиториум 
+cd SI_2023_lab1_213051 // влегување во директориум
+git init // иницијализирање на Git
+5. git remote add origin https://github.com/ivag1/SI_2023_lab1_213051.git
+6. notepad README.md // креирање фајл
+git add . // со ова, датотеката README.md е во фазата staged 
+git commit -m "Initial commit" // сега е повторно во фазата unmodified
+7. notepad SILab1.java
+git add .
+git commit -m "Add java class"
+8. синхронизирање на гранките со
+оддалечениот репозиториум: git push -u origin master 
+9. отворање на три гранки од master
+git branch bug1
+git branch bug2
+git branch bug3
+10. префрлање на гранката bug1:
+git checkout bug1
+11. по поправање на грешката, со git add . фајлот SILab1.java 
+е во фаза modified, и со git commit -m "Fix wrong loop for reading"
+се прави commit на променетиот фајл 
+12. git checkout bug2
+13. -исто како чекор 11-
+git add . 
+git commit -m "Fix wrong condition in filterOddNumbers"
+14. git checkout bug3
+15. 
+git add .
+git commit -m "Fix method sumEvenNumbers"
+16. git push origin bug1
+git push origin bug2
+git push origin bug3
+17. git checkout master
+18. при спојување на гранката bug1 со master (git merge bug1), не се случи конфликт,
+се искористува стратегија fast-forward
+19. git push origin --all
+20. git merge bug2
+не се случи конфликт, се користи 'ort' стратегија
+21. git push --all
+22. git checkout bug3
+23. git rebase master
+24. git checkout master
+25. git merge bug3
+нема конфликт, се користи fast-forward стратегија
+26. git push origin bug1
+git push origin bug2
+git push origin bug3 --force
+27. git log // ги прикажува сите commit-и
+28. 
+
